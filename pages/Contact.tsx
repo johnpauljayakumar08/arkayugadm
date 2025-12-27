@@ -7,68 +7,70 @@ const Contact: React.FC = () => {
   return (
     <div className="pt-32 pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
           {/* Info Side */}
           <div className="lg:sticky lg:top-32">
-            <div className="text-brand-gold font-black uppercase tracking-[0.5em] text-xs mb-6">HQ Connect</div>
-            <h1 className="text-6xl font-black text-slate-900 mb-8 tracking-tighter uppercase leading-none">Initiate <br /><span className="text-brand-maroon">Dialogue</span></h1>
-            <p className="text-xl text-slate-600 mb-12 leading-relaxed font-semibold italic">
-              "Elite growth starts with a single high-level conversation. Let's map your brand's future."
+            <div className="text-brand-gold font-black uppercase tracking-[0.6em] text-xs mb-8">Executive Liaison</div>
+            <h1 className="text-6xl lg:text-8xl font-black text-slate-900 mb-10 tracking-tighter uppercase leading-[0.9]">Open The <br /><span className="text-brand-maroon">Dialogue</span></h1>
+            <p className="text-2xl text-slate-600 mb-16 leading-relaxed font-bold italic">
+              "Every great empire begins with a high-level strategic alignment. We are ready to map your ascent."
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-16">
-              <div className="flex flex-col space-y-4">
-                <div className="w-14 h-14 bg-brand-maroon text-brand-gold rounded-2xl flex items-center justify-center shadow-lg">
-                  <Phone size={24} />
+            {/* Icon Grid - Standardized to Brand Colors */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mb-20">
+              <div className="flex flex-col space-y-6">
+                <div className="w-16 h-16 bg-brand-maroon text-brand-gold rounded-[1.25rem] flex items-center justify-center shadow-2xl">
+                  <Phone size={32} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-brand-maroon uppercase tracking-widest mb-1">Direct Command</h4>
-                  <p className="text-slate-900 font-black">+91-XXXXXXXXXX</p>
+                  <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">Direct Command</h4>
+                  <p className="text-xl text-slate-900 font-black">+91-XXXXXXXXXX</p>
                 </div>
               </div>
-              <div className="flex flex-col space-y-4">
-                <div className="w-14 h-14 bg-brand-maroon text-brand-gold rounded-2xl flex items-center justify-center shadow-lg">
-                  <Mail size={24} />
+              <div className="flex flex-col space-y-6">
+                <div className="w-16 h-16 bg-brand-maroon text-brand-gold rounded-[1.25rem] flex items-center justify-center shadow-2xl">
+                  <Mail size={32} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-brand-maroon uppercase tracking-widest mb-1">Elite Inbox</h4>
-                  <p className="text-slate-900 font-black">info@digigrow.com</p>
+                  <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">Elite Inbox</h4>
+                  <p className="text-xl text-slate-900 font-black">liaison@digigrow.com</p>
                 </div>
               </div>
-              <div className="flex flex-col space-y-4">
-                <div className="w-14 h-14 bg-brand-maroon text-brand-gold rounded-2xl flex items-center justify-center shadow-lg">
-                  <MapPin size={24} />
+              <div className="flex flex-col space-y-6">
+                <div className="w-16 h-16 bg-brand-maroon text-brand-gold rounded-[1.25rem] flex items-center justify-center shadow-2xl">
+                  <MapPin size={32} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-brand-maroon uppercase tracking-widest mb-1">The Atelier</h4>
-                  <p className="text-slate-900 font-black">New Delhi, Elite District</p>
+                  <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">The Atelier</h4>
+                  <p className="text-xl text-slate-900 font-black uppercase tracking-tighter">Elite District, New Delhi</p>
                 </div>
               </div>
-              <div className="flex flex-col space-y-4">
-                <div className="w-14 h-14 bg-brand-maroon text-brand-gold rounded-2xl flex items-center justify-center shadow-lg">
-                  <Clock size={24} />
+              <div className="flex flex-col space-y-6">
+                <div className="w-16 h-16 bg-brand-maroon text-brand-gold rounded-[1.25rem] flex items-center justify-center shadow-2xl">
+                  <Clock size={32} />
                 </div>
                 <div>
-                  <h4 className="text-sm font-black text-brand-maroon uppercase tracking-widest mb-1">Operating Window</h4>
-                  <p className="text-slate-900 font-black">Mon - Sat: 0900 - 1800</p>
+                  <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">Operating Window</h4>
+                  <p className="text-xl text-slate-900 font-black">Mon - Sat: 09:00 - 18:00</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-brand-maroon text-white p-12 rounded-[3rem] shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-brand-gold/10 -translate-y-1/2 translate-x-1/2 rounded-full"></div>
-              <h4 className="text-2xl font-black mb-8 uppercase tracking-tighter">The Gold Commitment</h4>
-              <ul className="space-y-6">
+            {/* Prestige Commitment Box */}
+            <div className="bg-brand-maroon text-white p-16 rounded-[4rem] shadow-3xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 -translate-y-1/2 translate-x-1/2 rounded-full"></div>
+              <h4 className="text-3xl font-black mb-10 uppercase tracking-tighter">The Gold Commitment</h4>
+              <ul className="space-y-8">
                 {[
-                  { icon: Zap, text: "Complimentary Elite Strategy Audit" },
-                  { icon: ShieldCheck, text: "Full NDA Confidentiality Guaranteed" },
-                  { icon: HeartHandshake, text: "Exclusivity-First Client Selection" }
+                  { icon: Zap, text: "Complimentary Growth Architecture Audit" },
+                  { icon: ShieldCheck, text: "Strict Executive Confidentiality" },
+                  { icon: HeartHandshake, text: "Direct Partner-Level Engagement" }
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center space-x-4">
-                    <div className="bg-brand-gold text-brand-maroon p-1.5 rounded-lg">
-                      <item.icon size={18} />
+                  <li key={idx} className="flex items-center space-x-6">
+                    <div className="bg-brand-gold text-brand-maroon p-2 rounded-xl shadow-xl">
+                      <item.icon size={24} />
                     </div>
-                    <span className="font-bold uppercase tracking-tight text-sm">{item.text}</span>
+                    <span className="font-black uppercase tracking-tight text-lg">{item.text}</span>
                   </li>
                 ))}
               </ul>
@@ -76,7 +78,9 @@ const Contact: React.FC = () => {
           </div>
 
           {/* Form Side */}
-          <ContactForm />
+          <div className="lg:pt-12">
+            <ContactForm />
+          </div>
         </div>
       </div>
     </div>
