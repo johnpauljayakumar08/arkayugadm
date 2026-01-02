@@ -18,14 +18,37 @@ const SERVICES_OPTIONS = [
 const ContactForm: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [company, setCompany] = useState('');
+  const [service, setService] = useState(SERVICES_OPTIONS[0]);
+  const [brief, setBrief] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    try {
+      const res = await fetch('http://localhost:4000/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, company, service, brief })
+      });
+      if (!res.ok) {
+        const json = await res.json().catch(() => ({}));
+        throw new Error(json.error || 'Server error');
+      }
       setSubmitted(true);
-    }, 1500);
+    } catch (err: any) {
+      console.error(err);
+      setError(err.message || 'Submission failed');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -39,7 +62,16 @@ const ContactForm: React.FC = () => {
           Our digital marketing specialists will contact you within 24 hours to discuss your project.
         </p>
         <button 
-          onClick={() => setSubmitted(false)}
+          onClick={() => {
+            setSubmitted(false);
+            setName('');
+            setEmail('');
+            setPhone('');
+            setCompany('');
+            setService(SERVICES_OPTIONS[0]);
+            setBrief('');
+            setError(null);
+          }}
           className="text-brand-maroon font-black hover:text-brand-gold transition-colors uppercase tracking-widest text-sm"
         >
           Send another inquiry
@@ -63,6 +95,8 @@ const ContactForm: React.FC = () => {
               required
               type="text" 
               placeholder="Full Name" 
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all font-bold"
             />
           </div>
@@ -72,6 +106,8 @@ const ContactForm: React.FC = () => {
               required
               type="email" 
               placeholder="Email Address" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all font-bold"
             />
           </div>
@@ -84,6 +120,8 @@ const ContactForm: React.FC = () => {
               required
               type="tel" 
               placeholder="Phone Number" 
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all font-bold"
             />
           </div>
@@ -93,6 +131,8 @@ const ContactForm: React.FC = () => {
               required
               type="text" 
               placeholder="Company" 
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
               className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all font-bold"
             />
           </div>
@@ -100,7 +140,7 @@ const ContactForm: React.FC = () => {
 
         <div>
           <label className="block text-xs font-black text-brand-maroon uppercase tracking-widest mb-2">Service Portfolio</label>
-          <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%207L10%2012L15%207%22%20stroke%3D%22%235D1B22%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] bg-[length:20px_20px] bg-[right_1rem_center] bg-no-repeat font-bold">
+          <select value={service} onChange={(e) => setService(e.target.value)} className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%207L10%2012L15%207%22%20stroke%3D%22%235D1B22%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3C/svg%3E')] bg-[length:20px_20px] bg-[right_1rem_center] bg-no-repeat font-bold">
             {SERVICES_OPTIONS.map(opt => <option key={opt} value={opt}>{opt}</option>)}
           </select>
         </div>
@@ -110,9 +150,13 @@ const ContactForm: React.FC = () => {
           <textarea 
             rows={4}
             placeholder="Tell us about your objectives..." 
+            value={brief}
+            onChange={(e) => setBrief(e.target.value)}
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-brand-maroon focus:border-transparent outline-none transition-all resize-none font-bold"
           ></textarea>
         </div>
+
+        {error && <div className="text-sm text-red-600 font-medium">{error}</div>}
 
         <button 
           disabled={loading}

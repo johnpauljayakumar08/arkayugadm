@@ -41,12 +41,12 @@ const Services: React.FC = () => {
                 className="flex-1"
               >
                 {/* Brand-consistent Maroon/Gold Icon Container */}
-                <div className="w-24 h-24 bg-brand-maroon text-brand-gold rounded-[2rem] flex items-center justify-center mb-12 shadow-3xl">
+                <div className="w-24 h-24 bg-brand-maroon text-brand-gold rounded-[2rem] flex items-center justify-center mb-8 shadow-3xl">
                   {getIcon(service.icon, "w-12 h-12")}
                 </div>
                 
-                <h2 className="text-5xl font-black text-slate-900 mb-10 tracking-tighter uppercase leading-none">{service.title}</h2>
-                <p className="text-xl text-slate-600 leading-relaxed mb-12 font-bold italic">
+                <h2 className="text-5xl font-black text-slate-900 mb-8 tracking-tighter uppercase leading-none">{service.title}</h2>
+                <p className="text-xl text-slate-600 leading-relaxed mb-8 font-bold italic">
                   "{service.description}"
                 </p>
                 
@@ -55,9 +55,9 @@ const Services: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
-                  className="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 mb-12 shadow-inner border-l-8 border-l-brand-gold"
+                  className="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 mb-8 shadow-inner border-l-8 border-l-brand-gold"
                 >
-                  <h4 className="text-sm font-black text-brand-maroon uppercase tracking-[0.4em] mb-8 flex items-center">
+                  <h4 className="text-sm font-black text-brand-maroon uppercase tracking-[0.4em] mb-4 flex items-center">
                     <Search size={18} className="mr-3 text-brand-gold" /> Critical Competencies
                   </h4>
                   <div className="flex flex-wrap gap-4">
@@ -110,7 +110,7 @@ const Services: React.FC = () => {
                       '1486312338219-ce68d2c6f44d',
                     ][idx % 4] || '1460925895917-afdab827c52f'}?auto=format&fit=crop&q=80&w=1000`} 
                     alt={service.title} 
-                    className="w-full h-[600px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-110"
+                    className="w-full h-[400px] object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 transform group-hover:scale-110"
                   />
                   <div className="absolute bottom-12 left-12 z-20">
                     <div className="bg-brand-gold text-brand-maroon px-8 py-3 rounded-full text-sm font-black uppercase tracking-widest shadow-2xl">Elite Asset Profile</div>

@@ -72,10 +72,10 @@ const Home: React.FC = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-6xl lg:text-9xl font-black text-slate-900 leading-[0.9] mb-8 tracking-tighter uppercase"
+            className="text-3xl lg:text-6xl font-black text-slate-900 leading-[0.9] mb-8 tracking-tighter uppercase"
           >
-            Forge Your <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-maroon via-brand-gold to-brand-maroonDark">Digital Empire</span>
+            Grow Your Business Faster with <br />
+            <span className="lg:text-5xl text-2xl text-transparent bg-clip-text bg-gradient-to-r from-brand-maroon via-brand-gold to-brand-maroonDark">Result‑Driven Digital Marketing</span>
           </m.h1>
 
           <m.p 
@@ -84,7 +84,7 @@ const Home: React.FC = () => {
             transition={{ duration: 1, delay: 0.4 }}
             className="text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-bold italic"
           >
-            We merge the authority of Maroon with the prestige of Gold to craft marketing strategies that command attention and drive exponential growth.
+            We help startups and growing brands increase visibility, generate quality leads, and convert traffic into loyal customers using proven digital marketing strategies.
           </m.p>
 
           <m.div 
@@ -95,12 +95,12 @@ const Home: React.FC = () => {
           >
             <Link to="/contact" className="group relative w-full sm:w-auto bg-brand-maroon text-white px-12 py-5 rounded-2xl font-black text-xl hover:bg-brand-maroonDark transition-all shadow-2xl hover:shadow-brand-maroon/40 overflow-hidden">
               <span className="relative z-10 flex items-center justify-center">
-                Ignite Growth <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                Get a Free Consultation <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-brand-gold translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 opacity-20"></div>
             </Link>
             <Link to="/services" className="w-full sm:w-auto bg-white/60 backdrop-blur-sm text-brand-maroon border-2 border-brand-maroon/20 px-12 py-5 rounded-2xl font-black text-xl hover:border-brand-maroon transition-all">
-              View Portfolios
+              View Our Services
             </Link>
           </m.div>
         </m.div>
@@ -119,11 +119,11 @@ const Home: React.FC = () => {
                 Signature Selection
               </m.div>
               <h2 className="text-5xl lg:text-6xl font-black text-brand-maroon tracking-tighter uppercase leading-[0.9]">
-                Bespoke Growth <br /> <span className="text-slate-900">Instruments</span>
+                We offer end‑to‑end  <br /> <span className="text-slate-900">digital marketing services</span>
               </h2>
             </div>
             <Link to="/services" className="group flex items-center space-x-4 text-brand-maroon font-black uppercase tracking-widest hover:text-brand-gold transition-colors">
-              <span>Explore All Expertise</span>
+              <span>Explore All services</span>
               <div className="w-14 h-14 rounded-2xl border-2 border-brand-maroon group-hover:border-brand-gold flex items-center justify-center transition-all group-hover:rotate-12">
                 <ArrowRight size={24} />
               </div>
@@ -175,7 +175,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Standardized Branding Stats */}
-      <section className="py-24 bg-brand-maroon text-white relative overflow-hidden">
+      {/* <section className="py-24 bg-brand-maroon text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#9E7E5D_0%,transparent_75%)]"></div>
         </div>
@@ -200,7 +200,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final Call to Action */}
       <section className="py-32 bg-slate-50 relative">
@@ -214,8 +214,8 @@ const Home: React.FC = () => {
             <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-maroon translate-x-1/2 -skew-x-12 opacity-[0.05]"></div>
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
               <div className="lg:max-w-2xl">
-                <h2 className="text-5xl lg:text-7xl font-black text-brand-maroon mb-8 tracking-tighter uppercase leading-[0.9]">Command Your <br /><span className="text-slate-900">Future Today</span></h2>
-                <p className="text-2xl text-slate-500 font-bold italic mb-8">"Exclusivity is not an option—it is the prerequisite for dominance."</p>
+                <h2 className="text-5xl lg:text-7xl font-black text-brand-maroon mb-8 tracking-tighter uppercase leading-[0.9]">Ready to grow <br /><span className="text-slate-800">your business online?</span></h2>
+                <p className="text-2xl text-slate-500 font-bold italic mb-8">"Let’s discuss your goals and build a strategy that works."</p>
                 <div className="flex space-x-6">
                    <div className="flex items-center space-x-2 text-brand-gold font-black uppercase text-xs tracking-widest">
                     <CheckCircle2 size={18} /> <span>ELITE AUDIT</span>
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <Link to="/contact" className="w-full lg:w-auto bg-brand-maroon text-white px-16 py-8 rounded-3xl font-black text-3xl hover:bg-brand-maroonDark transition-all shadow-2xl hover:shadow-brand-maroon/40 text-center uppercase tracking-tighter">
-                Enter The Circle
+                Contact Us Today
               </Link>
             </div>
           </m.div>

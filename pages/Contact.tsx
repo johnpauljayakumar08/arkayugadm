@@ -11,9 +11,9 @@ const Contact: React.FC = () => {
           {/* Info Side */}
           <div className="lg:sticky lg:top-32">
             <div className="text-brand-gold font-black uppercase tracking-[0.6em] text-xs mb-8">Executive Liaison</div>
-            <h1 className="text-6xl lg:text-8xl font-black text-slate-900 mb-10 tracking-tighter uppercase leading-[0.9]">Open The <br /><span className="text-brand-maroon">Dialogue</span></h1>
+            <h1 className="text-4xl lg:text-6xl font-black text-slate-900 mb-10 tracking-tighter uppercase leading-[0.9]">Contact Us <br /><span className="text-brand-maroon"></span></h1>
             <p className="text-2xl text-slate-600 mb-16 leading-relaxed font-bold italic">
-              "Every great empire begins with a high-level strategic alignment. We are ready to map your ascent."
+              "Have a project in mind or want to grow your business online? Get in touch with us today."
             </p>
 
             {/* Icon Grid - Standardized to Brand Colors */}
@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">Direct Command</h4>
-                  <p className="text-xl text-slate-900 font-black">+91-XXXXXXXXXX</p>
+                  <p className="text-xl text-slate-900 font-black"><a href="tel:+919962999817" className="hover:text-brand-maroon transition-colors block">9962999817</a><a href="tel:+919962999818" className="hover:text-brand-maroon transition-colors block">9962999818</a> <a href="tel:+919962999819" className="hover:text-brand-maroon transition-colors block">9962999819</a></p>
                 </div>
               </div>
               <div className="flex flex-col space-y-6">
@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">Elite Inbox</h4>
-                  <p className="text-xl text-slate-900 font-black">liaison@digigrow.com</p>
+                  <p className="text-xl text-slate-900 font-black"><a href="mailto:info@arkayuga.com" className="hover:text-brand-maroon transition-colors block">info@arkayuga.com</a></p>
                 </div>
               </div>
               <div className="flex flex-col space-y-6">
@@ -42,7 +42,17 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h4 className="text-xs font-black text-brand-maroon uppercase tracking-[0.3em] mb-2">The Atelier</h4>
-                  <p className="text-xl text-slate-900 font-black uppercase tracking-tighter">Elite District, New Delhi</p>
+                  <p className="text-xl text-slate-900 font-black uppercase tracking-tighter">
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=Site%20no.54%2C%20Door%20no.29%20ashok%20layout%2C%20civil%20aerodrome%20post%2C%20sitra%2C%20Coimbatore%20641014"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-brand-maroonDark transition-colors block"
+                      aria-label="Open Arkayuga address in Google Maps"
+                    >
+                      Site no.54, Door no.29 ashok layout, civil aerodrome post, sitra, Coimbatore 641014
+                    </a>
+                  </p>
                 </div>
               </div>
               <div className="flex flex-col space-y-6">
@@ -57,7 +67,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Prestige Commitment Box */}
-            <div className="bg-brand-maroon text-white p-16 rounded-[4rem] shadow-3xl relative overflow-hidden">
+            {/* <div className="bg-brand-maroon text-white p-16 rounded-[4rem] shadow-3xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-gold/10 -translate-y-1/2 translate-x-1/2 rounded-full"></div>
               <h4 className="text-3xl font-black mb-10 uppercase tracking-tighter">The Gold Commitment</h4>
               <ul className="space-y-8">
@@ -74,16 +84,31 @@ const Contact: React.FC = () => {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
+          {/* Embedded Google Map */}
+          
           {/* Form Side */}
           <div className="lg:pt-12">
             <ContactForm />
           </div>
         </div>
       </div>
+      {/* <div>
+        <iframe
+          title="Arkayuga Location Map"
+          src="https://www.google.com/maps/search/?api=1&query=Site%20no.54%2C%20Door%20no.29%20ashok%20layout%2C%20civil%20aerodrome%20post%2C%20sitra%2C%20Coimbatore%20641014"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div> */}
     </div>
+    
   );
 };
 

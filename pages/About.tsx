@@ -46,12 +46,12 @@ const About: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-3xl font-black text-brand-maroon mb-8 tracking-tighter uppercase">Power Through Precision</h3>
+              <h3 className="text-3xl font-black text-brand-maroon mb-8 tracking-tighter uppercase">About Our Company</h3>
               <p className="text-xl text-slate-700 leading-relaxed mb-8 font-medium">
-                DigiGrow was founded with a singular focus: to redefine the digital experience through the lens of high-end strategy and elite execution.
+                We are a fresh and fast‑growing digital marketing startup with a strong foundation in modern marketing technologies. Though we have a handful of successful projects, our focus is on quality execution, long‑term partnerships, and measurable business results.
               </p>
               <p className="text-lg text-slate-500 leading-relaxed mb-12 font-medium italic">
-                Our team is a collective of specialized minds dedicated to the craft of growth. We don't just follow trends; we set the benchmark.
+               Our team consists of skilled marketers, designers, developers, and strategists who work collaboratively to help brands grow in competitive digital landscapes.
               </p>
               <div className="grid grid-cols-3 gap-8">
                 {[
@@ -98,9 +98,9 @@ const About: React.FC = () => {
               <div className="w-24 h-24 bg-brand-maroon text-brand-gold rounded-[2rem] flex items-center justify-center mb-12 group-hover:scale-110 transition-transform shadow-2xl border-2 border-brand-gold/30">
                 <Target size={48} />
               </div>
-              <h2 className="text-4xl font-black mb-6 tracking-tighter uppercase">Our Command</h2>
+              <h2 className="text-4xl font-black mb-6 tracking-tighter uppercase">Our Mission</h2>
               <p className="text-2xl text-white/70 leading-relaxed font-bold italic">
-                "To architect market-leading digital ecosystems that yield undisputed ROI for elite brands."
+                "To help businesses of all sizes achieve sustainable growth by delivering ethical, data‑driven, and result‑oriented digital marketing solutions."
               </p>
             </m.div>
             <m.div 
@@ -114,7 +114,7 @@ const About: React.FC = () => {
               </div>
               <h2 className="text-4xl font-black mb-6 tracking-tighter uppercase">Our Vision</h2>
               <p className="text-2xl text-white/70 leading-relaxed font-bold italic">
-                "To be the global benchmark for digital excellence, where our gold mark represents the peak of performance."
+                "To become a trusted digital growth partner for startups and enterprises by continuously innovating and delivering measurable value through digital excellence."
               </p>
             </m.div>
           </div>
@@ -126,7 +126,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-24">
             <div className="text-brand-gold font-black uppercase tracking-[0.6em] text-xs mb-4">Core Principles</div>
-            <h2 className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter uppercase">Ethos of Elite Results</h2>
+            <h2 className="text-5xl lg:text-6xl font-black text-slate-900 tracking-tighter uppercase">Our Core Values</h2>
           </div>
           <m.div 
             variants={containerVariants}
