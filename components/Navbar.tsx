@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Landmark } from 'lucide-react';
-const logo = new URL('../assets/arkayuga_logo.png', import.meta.url).href;
+const logo = new URL('../assets/arkayugadm.png', import.meta.url).href;
 import { NAV_LINKS } from '../constants';
 
 const Navbar: React.FC = () => {
@@ -26,9 +26,7 @@ const Navbar: React.FC = () => {
               <img src={logo} alt="Arkayuga" className="w-30 h-20 block" />
             {/* <div className="p-1 rounded-lg bg-white group-hover:opacity-90 transition-shadow shadow-lg">
             </div> */}
-            <span className={`text-xl font-black tracking-tighter uppercase ${scrolled ? 'text-brand-maroon' : 'text-brand-maroon'}`}>
-              Digital Agency
-            </span>
+            
           </Link>
 
           {/* Desktop Nav */}

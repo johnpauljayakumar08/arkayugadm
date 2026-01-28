@@ -19,11 +19,18 @@ const Footer: React.FC = () => {
               The gold standard in digital marketing. We deliver prestige and performance for brands that demand excellence.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Linkedin, Instagram].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-maroon transition-all border border-white/10">
-                  <Icon size={18} />
-                </a>
-              ))}
+              <a href="https://www.facebook.com/profile.php?id=61586097938417" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-maroon transition-all border border-white/10">
+                <Facebook size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-maroon transition-all border border-white/10">
+                <Twitter size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-maroon transition-all border border-white/10">
+                <Linkedin size={18} />
+              </a>
+              <a href="https://www.instagram.com/arkayuga_dm/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-gold hover:text-brand-maroon transition-all border border-white/10">
+                <Instagram size={18} />
+              </a>
             </div>
           </div>
 
